@@ -1,7 +1,7 @@
 " -----------------   Author: Ruchee
 " -----------------    Email: my@ruchee.com
 " -----------------  WebSite: http://www.ruchee.com
-" -----------------     Date: 2013-07-02 11:38
+" -----------------     Date: 2013-07-02 12:30
 " -----------------     For Windows, Cygwin and Linux
 
 
@@ -416,6 +416,8 @@ func! CompileCode()
         exec "!gcc -Wall -std=c11 -o %:r %:t"
     elseif &filetype == "cpp"
         exec "!g++ -Wall -std=c++11 -o %:r %:t"
+    elseif &filetype == "lua"
+        exec "!lua %:t"
     elseif &filetype == "perl"
         exec "!perl %:t"
     elseif &filetype == "php"
@@ -439,6 +441,8 @@ func! RunCode()
         else
             exec "!./%:r"
         endif
+    elseif &filetype == "lua"
+        exec "!lua %:t"
     elseif &filetype == "perl"
         exec "!perl %:t"
     elseif &filetype == "php"

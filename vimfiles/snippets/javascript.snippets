@@ -4,8 +4,14 @@ snippet //      多行注释
 	/*${1}*/
 snippet -       分隔注释
 	// -------------------------------${1}
+# 全局相关
 snippet us      严格模式
 	"use strict";${1}
+snippet rq      导入包
+	require('${1}');${2}
+snippet ex      导出函数
+	exports.${1}
+# 函数、流程控制
 snippet f       常规函数
 	function ${1:f_name} (${2})
 	{
@@ -65,10 +71,12 @@ snippet pt      原型
 	prototype${1}
 snippet tp      类型
 	typeof${1}
-snippet p       常用输出
+snippet p       文本打印
 	document.writeln(${1});
 snippet al      弹出框
 	alert(${1});
+snippet cl      终端输出
+	console.log(${1});
 snippet len     获取字符串长度
 	length${1}
 snippet v       var
@@ -99,9 +107,8 @@ snippet gat     getAttribute
 snippet sat     setAttribute
 	setAttribute('${1}', ${2})
 ################
-# jQuery框架
-snippet .       选择器
+snippet .       jQuery选择器
 	$(${1})
-snippet >       选择器（带引号）
+snippet >       jQuery选择器（带引号）
 	$('${1}')${2}
 ################
